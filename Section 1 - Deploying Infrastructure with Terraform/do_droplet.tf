@@ -1,12 +1,6 @@
-provider "digitalocean" {
-  token = "PUT-YOUR-TOKEN-HERE"
+resource "aws_instance" "test" {
+  ami           = "ami-0400d5cc4e83eab19"
+  instance_type = "t2.micro"
 }
 
-
-resource "digitalocean_droplet" "kplabsdroplet" {
-  image  = "ubuntu-18-04-x64"
-  name   = "web-1"
-  region = "nyc1"
-  size   = "s-1vcpu-1gb"
-}
 
